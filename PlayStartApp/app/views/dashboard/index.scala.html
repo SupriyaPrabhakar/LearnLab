@@ -1,0 +1,46 @@
+@(user: User, event: Event)
+
+@main(user) {
+<font color="blue">Welcome @user.fullname!!!</font>
+<div id="wrapper">
+    <div class="col-md-3">
+        <div class="well sidebar-nav">
+            <ol class="nav">
+                <li><font color="blue">Your Profile</font> </li>
+                <br>
+                <li><font color="blue">ID: @user.id</font></li>
+                <br>
+                <li><font color="blue">Quizzes Attempted: @user.noOfQuizesParticipated</font></li>
+                <br>
+                <li><font color="blue">Aggregated Score: @user.aggregatedScore</font></li>
+                <br>
+                <li><font color="blue">Badges: @user.badge</font></li>
+                <br>
+                <li><font color="blue">HashTag Contribution: @user.hashTagContributions</font></li>
+                <br>
+            </ol>
+        </div>
+        <!--/.well -->
+    </div>
+</div>
+<div class="col-md-9">
+    <table class="table table-striped">
+        <tr>
+            <th>Event Name</th>
+            <th>Script</th>
+            <th>Participants</th>
+            <th>JoinIn</th>
+        </tr>
+        <tr>
+            <td>@event.eventName</td>
+            <td>@event.script</td>
+            <td>1</td>
+            <td>
+            <form  method="POST" name="joinEvent" action="@routes.EventBoard.index()">
+                <input type="submit" name="Join" value= "Join" class="btn btn-success">
+            </form></td>
+        </tr>
+    </table>
+</div>
+    <!--/span-->
+}

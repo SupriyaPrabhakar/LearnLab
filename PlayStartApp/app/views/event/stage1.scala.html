@@ -1,0 +1,55 @@
+@(user: User, event: Event, question: Question)
+
+@main(user) {
+<div id="wrapper">
+    <div class="col-md-3">
+        <div class="well sidebar-nav">
+            <ol class="nav">
+                <li><font color="blue">Event Details</font> </li>
+                <br>
+                <li><font color="blue">Event Id: @event.eventId</font></li>
+                <br>
+                <li><font color="blue">Event Name: @event.eventName</font></li>
+                <br>
+                <li><font color="blue">HashTags:</font>
+                    <ul>
+                        <li><font color="DodgerBlue">#Concept</font></li>
+                        <li><font color="DodgerBlue">#Justification</font></li>
+                        <li><font color="DodgerBlue">#Example</font></li>
+                    </ul>
+                </li>
+                <br>
+                <li><font color="blue">Event Members:</font>
+                    <ul>
+                        <li><font color="DodgerBlue">Anil</font></li>
+                        <li><font color="DodgerBlue">Denny</font></li>
+                        <li><font color="DodgerBlue">Dhanyatha</font></li>
+                        <li><font color="DodgerBlue">Shruthi</font></li>
+                        <li><font color="DodgerBlue">Supriya</font></li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        <!--/.well -->
+    </div>
+</div>
+<ul id="myTab" class="nav nav-tabs" role="tablist">
+    <li class="active"><a href="@routes.EventBoard.stage1()" role="tab" data-toggle="tab">Stage 1</a>
+        <p class="question"><b>A WHERE clause can be added to a SELECT statement to add conditions to the rows being returned.<br> <br>
+            SELECT * FROM products WHERE ordernumber >= 1000 <br><br> What rows will this select statement return? <br> </b></p>
+        <ul class="answers">
+            <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">  What rows will this select statement return?</label><br/>
+            <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">  All rows in the products table whose order number is greater than or equal to 1000.</label><br/>
+            <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">  All rows in the products table whose order number is less than or equal to 1000 </label><br/>
+            <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">  All rows in the products table whose order number is greater than 1000.</label><br/>
+        </ul>
+        <p align="right"><a href="http://www.funtrivia.com/playquiz/quiz2529321cf56e8.html"> <font size="2">Source</font></a></p>
+
+
+
+    </li>
+    <li><a href="#profile" role="tab" data-toggle="tab">Stage 2</a></li>
+    <li><a href="#profile" role="tab" data-toggle="tab">Stage 3</a></li>
+</ul>
+<!--/span-->
+}
